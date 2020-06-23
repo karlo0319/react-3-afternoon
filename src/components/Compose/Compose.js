@@ -27,6 +27,10 @@ export default class Compose extends Component {
   render() {
     // Destructuring
     const { text } = this.state;
+    const {createPostFn} = this.props;
+
+    createPostFn(text);
+    this.setState({text: ''})
 
     return (
       <section className="Compose__parent">
